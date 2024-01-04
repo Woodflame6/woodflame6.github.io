@@ -1,11 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leafspark's Hub</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        aside {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            width: 250px;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            background-color: #34495e;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        main {
+            flex: 1;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #bdc3c7;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .social-link:hover {
+            color: #2ecc71;
+        }
+    </style>
 </head>
+
 <body>
+    <aside>
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#connect">Connect</a></li>
+            <li><a href="https://leafspark.github.io/repo.html">iOS Tweaked IPAs</a></li>
+            <li><a href="https://leafspark.github.io/tempdev0.html">r/Jailbreak test demo</a></li>
+        </ul>
+    </aside>
 
-<h1>test</h1>
-<p>test</p>
+    <main>
+        <header>
+            <h1>Welcome to leafspark's Hub</h1>
+            <p>Your go-to place for awesome apps and more!</p>
+        </header>
 
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Creating cool stuff on GitHub. Follow for more!</p>
+        </section>
+
+        <section id="connect">
+            <h2>Socials</h2>
+            <div class="social-links">
+                <a href="https://twitter.com/leafspark" class="social-link" target="_blank"
+                    rel="noopener noreferrer">Twitter</a>
+                <a href="https://github.com/leafspark" class="social-link" target="_blank"
+                    rel="noopener noreferrer">GitHub</a>
+                <!-- Add more social links as needed -->
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>
