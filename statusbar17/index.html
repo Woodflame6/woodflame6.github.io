@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PiP Web Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="background-color-container">
+    <label for="website-background-color-input">Website Background Color:</label>
+    <input type="color" id="website-background-color-input" value="#f2f2f2">
+  </div>
+  <canvas id="dynamic-canvas"></canvas>
+  <div id="info-container">
+    <div id="time">Time: <span id="current-time"></span></div>
+    <div id="date">Date: <span id="current-date"></span></div>
+    <div id="weather">Weather: <span id="current-weather"></span></div>
+    <button id="pip-button">Toggle PiP</button>
+  </div>
+  <div id="settings-container">
+    <label for="text-color-input">Text Color:</label>
+    <input type="color" id="text-color-input" value="#ffffff">
+    <label for="background-color-input">Background Color:</label>
+    <input type="color" id="background-color-input" value="#3498db">
+  </div>
+  <video controls id="canvas-video"></video>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
