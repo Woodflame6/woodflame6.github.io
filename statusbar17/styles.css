@@ -1,0 +1,75 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--website-background-color, #f2f2f2);
+  color: #333;
+}
+
+#background-color-container {
+  margin-bottom: 20px;
+}
+
+#dynamic-canvas {
+  background-color: #3498db;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+#info-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+#time, #date, #weather {
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  margin: 0 20px;
+}
+
+#pip-button {
+  padding: 12px;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#pip-button:hover {
+  background-color: #2471a3;
+}
+
+#settings-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#text-color-input, #background-color-input, #website-background-color-input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#text-color-input:focus, #background-color-input:focus, #website-background-color-input:focus {
+  outline: none;
+  border-color: #2980b9;
+}
+
+#canvas-video {
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
