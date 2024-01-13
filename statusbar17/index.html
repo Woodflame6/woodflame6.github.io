@@ -9,9 +9,11 @@
 <body>
   <div id="background-color-container">
     <label for="website-background-color-input">Website Background Color:</label>
-    <input type="color" id="website-background-color-input" value="#f2f2f2">
+    <input type="color" id="website-background-color-input" value="#0d6efd">
   </div>
-  <canvas id="dynamic-canvas"></canvas>
+  <div id="canvas-video-container">
+    <video controls id="canvas-video"></video>
+  </div>
   <div id="info-container">
     <div id="time">Time: <span id="current-time"></span></div>
     <div id="date">Date: <span id="current-date"></span></div>
@@ -22,9 +24,51 @@
     <label for="text-color-input">Text Color:</label>
     <input type="color" id="text-color-input" value="#ffffff">
     <label for="background-color-input">Background Color:</label>
-    <input type="color" id="background-color-input" value="#3498db">
+    <input type="color" id="background-color-input" value="#0d6efd">
+    <label for="text-size-slider">Text Size:</label>
+    <input type="range" id="text-size-slider" min="10" max="50" value="14">
+
+    <label for="text-placement-slider">Text Placement (x):</label>
+    <input type="range" id="text-placement-slider" min="-50" max="900" value="0">
+    
+    <label for="text-placement-slider-y">Text Placement (y):</label>
+    <input type="range" id="text-placement-slider-y" min="-90" max="400" value="0">
+    
+    <label for="bold-text-checkbox">Bold Text:</label>
+    <input type="checkbox" id="bold-text-checkbox">
+    
+    <label for="text-spacing-slider">Text Spacing:</label>
+    <input type="range" id="text-spacing-slider" min="-50" max="200" value="0">
+
+    <button id="export-button">Export Settings</button>
+    <button id="import-button">Import Settings</button>
+
+    <!-- Buttons for enabling/disabling specific widgets -->
+    <button id="toggle-time-widget">Toggle Time Widget</button>
+    <button id="toggle-date-widget">Toggle Date Widget</button>
+    <button id="toggle-weather-widget">Toggle Weather Widget</button>
+	<button id="toggle-rss-widget">Toggle RSS Widget</button>
   </div>
-  <video controls id="canvas-video"></video>
+
+  <!-- RSS Widget Container -->
+  <div id="rss-widget-container">
+    <label for="rss-url-input">RSS URL:</label>
+    <input type="text" id="rss-url-input" placeholder="Enter RSS URL">
+    <button id="fetch-rss-button">Fetch Articles</button>
+    <ul id="rss-widget-list"></ul>
+  </div>
+<!-- Add latitude and longitude input fields -->
+<label for="latitude-input">Latitude:</label>
+<input type="text" id="latitude-input" placeholder="Enter Latitude">
+<label for="longitude-input">Longitude:</label>
+<input type="text" id="longitude-input" placeholder="Enter Longitude">
+<button id="fetch-weather-button">Fetch Weather</button>
+<div id="current-weather"></div>
+
+
+  </div>
+  <h2 id="preview-heading">Preview</h2>
+  <canvas id="dynamic-canvas"></canvas>
 
   <script src="script.js" defer></script>
 </body>

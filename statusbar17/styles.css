@@ -1,75 +1,111 @@
+/* Reset some default styles */
+html, body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set the base font size and family */
+html {
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+}
+
 body {
+  background-color: var(--website-background-color, #f8f9fa);
+  color: #333;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--website-background-color, #f2f2f2);
-  color: #333;
 }
 
+/* Container for background color input */
 #background-color-container {
   margin-bottom: 20px;
 }
 
-#dynamic-canvas {
-  background-color: #3498db;
-  border-radius: 10px;
-  margin-top: 20px;
+label {
+  margin-right: 5px;
 }
 
-#info-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: 20px;
-}
-
-#time, #date, #weather {
-  font-size: 14px;
-  color: white;
-  text-align: center;
-  margin: 0 20px;
-}
-
-#pip-button {
-  padding: 12px;
-  background-color: #2980b9;
-  color: white;
-  border: none;
-  border-radius: 5px;
+input[type="color"], input[type="range"], input[type="checkbox"], button {
+  margin: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  border: none;
+  border-radius: 4px;
 }
 
-#pip-button:hover {
-  background-color: #2471a3;
+/* Canvas video container */
+#canvas-video-container {
+  display: none;
 }
 
+/* Info container styles */
+#info-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Settings container styles */
 #settings-container {
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* RSS Widget Container styles */
+#rss-widget-container {
   margin-top: 20px;
 }
 
-#text-color-input, #background-color-input, #website-background-color-input {
+#rss-url-input {
+  margin-right: 10px;
+}
+
+#rss-widget-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#rss-widget-list li {
+  margin-bottom: 5px;
+}
+
+/* Preview heading styles */
+#preview-heading {
+  font-size: 24px;
   margin-bottom: 10px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
 }
 
-#text-color-input:focus, #background-color-input:focus, #website-background-color-input:focus {
-  outline: none;
-  border-color: #2980b9;
+/* Canvas styles */
+#dynamic-canvas {
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  max-width: 100%;
 }
 
+/* Video styles */
 #canvas-video {
-  margin-top: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+/* Latitude and Longitude input styles */
+#latitude-input,
+#longitude-input {
+  margin: 5px;
+}
+
+/* Fetch weather button styles */
+#fetch-weather-button {
+  padding: 8px 12px;
+  margin-top: 10px;
+  background-color: #0d6efd;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
