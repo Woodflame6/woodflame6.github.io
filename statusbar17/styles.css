@@ -39,7 +39,6 @@ input[type="color"], input[type="range"], input[type="checkbox"], button {
 
 /* Canvas video container */
 #canvas-video-container {
-  display: none;
 }
 
 /* Info container styles */
