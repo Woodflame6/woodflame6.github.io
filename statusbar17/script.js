@@ -397,6 +397,12 @@ function enterPiP() {
                console.error('Error exiting PiP:', error);
             });
          } else {
+            // Ensure that the video is not in fullscreen mode
+            if (document.fullscreenElement || document.webkitFullscreenElement) {
+               document.exitFullscreen();
+            }
+
+            // Request PiP with a user gesture
             videoElement.requestPictureInPicture().then(() => {
                canvasVideoContainer.style.display = 'block';
                previewHeading.style.display = 'none';
@@ -405,8 +411,10 @@ function enterPiP() {
             });
          }
       } else {
-         console.error('Picture-in-Picture not supported on this browser.');
+         console.error('Picture-in-Picture not supported on this browser or device.');
       }
+   } else {
+      console.error('Video element not found.');
    }
 }
 
