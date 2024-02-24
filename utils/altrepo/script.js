@@ -1,13 +1,3 @@
-document.getElementById('importButton').addEventListener('click', function() {
-    const jsonData = prompt('Paste your JSON data here:');
-    try {
-        const parsedData = JSON.parse(jsonData);
-        populateForm(parsedData);
-    } catch (error) {
-        alert('Invalid JSON format!');
-    }
-});
-
 document.getElementById('addAppButton').addEventListener('click', function() {
     const appInputs = document.getElementById('appInputs');
     const appTemplate = `
@@ -81,6 +71,7 @@ document.getElementById('repoForm').addEventListener('submit', function(event) {
     document.getElementById('jsonOutput').innerText = JSON.stringify(jsonData, null, 2);
 });
 
+// Function to populate form with JSON data
 function populateForm(data) {
     document.getElementById('name').value = data.name || '';
     document.getElementById('subtitle').value = data.subtitle || '';
