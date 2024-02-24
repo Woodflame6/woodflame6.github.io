@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repository JSON Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Repository JSON Generator</h1>
+        <form id="repoForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="subtitle">Subtitle:</label>
+            <input type="text" id="subtitle" name="subtitle"><br><br>
+
+            <label for="description">Description:</label><br>
+            <textarea id="description" name="description" rows="4" required></textarea><br><br>
+
+            <label for="iconURL">Icon URL:</label>
+            <input type="text" id="iconURL" name="iconURL"><br><br>
+
+            <label for="tintColor">Tint Color:</label>
+            <input type="text" id="tintColor" name="tintColor"><br><br>
+
+            <button type="submit">Generate JSON</button>
+        </form>
+        <pre id="jsonOutput"></pre>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
