@@ -9,6 +9,7 @@
 <body>
     <div class="container">
         <h1>Repository JSON Generator</h1>
+        <button id="importButton">Import JSON</button>
         <form id="repoForm">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required><br><br>
@@ -24,6 +25,14 @@
 
             <label for="tintColor">Tint Color:</label>
             <input type="text" id="tintColor" name="tintColor"><br><br>
+
+            <div id="appsSection">
+                <h2>Apps:</h2>
+                <div id="appInputs">
+                    <!-- App input fields will be dynamically added here -->
+                </div>
+                <button type="button" id="addAppButton">Add App</button>
+            </div>
 
             <button type="submit">Generate JSON</button>
         </form>
