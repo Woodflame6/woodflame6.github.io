@@ -9,7 +9,7 @@ const createScene = function() {
     const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 1, 0), scene);
 
     const models = [
-        { name: "Model 1", file: "bugatti.obj", description: "Description of Model 1" },
+        { name: "BugattiTest", file: "https://github.com/LeafSpark/leafspark.github.io/releases/download/files/bugatti.obj", description: "Description of Model 1" },
         // { name: "Model 2", file: "path/to/model2.obj", description: "Description of Model 2" },
         // Add more models as needed
     ];
