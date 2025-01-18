@@ -1,105 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>leafspark's Hub</title>
+    <title>leafspark@hub</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f9;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            min-height: 100vh;
+        :root {
+            --background: #0a0a0a;
+            --text: #f0f0f0;
+            --accent: #00ff00;
+            --secondary: #1a1a1a;
+            --border: #333333;
         }
 
-        aside {
-            background-color: #2c3e50;
-            color: #ecf0f1;
-            width: 250px;
-            padding: 20px;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            letter-spacing: -0.02em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
         }
 
         header {
-            background-color: #34495e;
-            color: #ecf0f1;
-            text-align: center;
-            padding: 20px;
-            width: 100%;
+            border: 2px solid var(--border);
+            padding: 2rem;
+            margin: 2rem 0;
+            position: relative;
         }
 
-        main {
-            flex: 1;
-            padding: 50px;
-        }
-
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 1.2em;
-            color: #bdc3c7;
+        header::before {
+            content: "leafspark@hub:~$";
+            position: absolute;
+            top: -1rem;
+            left: 1rem;
+            background: var(--background);
+            padding: 0 0.5rem;
+            color: var(--accent);
+            font-family: 'Courier New', Courier, monospace;
         }
 
         section {
-            margin-bottom: 50px;
+            border: 2px solid var(--border);
+            padding: 2rem;
+            margin: 2rem 0;
+            position: relative;
         }
 
-        .social-links {
+        section::before {
+            content: attr(data-section);
+            position: absolute;
+            top: -1rem;
+            left: 1rem;
+            background: var(--background);
+            padding: 0 0.5rem;
+            color: var(--accent);
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: normal;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+            font-weight: normal;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            border: 2px solid var(--border);
+            padding: 1.5rem;
+            transition: border-color 0.2s;
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+        }
+
+        .links {
             display: flex;
-            flex-direction: column;
-            margin-top: 20px;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
-        .social-link {
-            margin-bottom: 10px;
-            font-size: 1.5em;
-            color: #3498db;
+        .link {
+            color: var(--background);
+            background: var(--accent);
             text-decoration: none;
-            transition: color 0.3s ease-in-out;
+            padding: 0.5rem 1rem;
+            font-family: 'Courier New', Courier, monospace;
+            transition: transform 0.2s;
+            display: inline-block;
         }
 
-        .social-link:hover {
-            color: #2ecc71;
+        .link:hover {
+            transform: translateY(-2px);
+        }
+
+        nav {
+            border: 2px solid var(--border);
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
         }
     </style>
+</head>
 <body>
-    <aside>
-        <h2>Navigation</h2>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#connect">Connect</a></li>
-            <li><a href="https://leafspark.github.io/repo.html">iOS Tweaked IPAs</a></li>
-            <li><a href="https://leafspark.github.io/tempdev0.html">r/Jailbreak test demo</a></li>
-        </ul>
-    </aside>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#about">~/about</a></li>
+                <li><a href="#interests">~/interests</a></li>
+                <li><a href="#projects">~/projects</a></li>
+                <li><a href="#connect">~/connect</a></li>
+                <li><a href="https://leafspark.github.io/repo.html">~/ios-repo</a></li>
+                <li><a href="https://leafspark.github.io/tempdev0.html">~/jailbreak-demo</a></li>
+            </ul>
+        </nav>
 
-    <main>
         <header>
-            <h1>Welcome to leafspark's Hub</h1>
-            <p>Your go-to place for awesome apps and more!</p>
+            <h1>leafspark@hub</h1>
+            <p>> tech enthusiast, aviation geek, iOS tinkerer_</p>
         </header>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Creating cool stuff on GitHub. Follow for more!</p>
+        <section data-section="about.txt">
+            <h2>> whoami</h2>
+            <p>Tech explorer specializing in mobile systems, aviation tracking, and digital cartography. Currently mapping the digital and physical worlds, one cell tower at a time.</p>
         </section>
 
-        <section id="connect">
-            <h2>Socials</h2>
-            <div class="social-links">
-                <a href="https://example.com/" class="social-link" target="_blank"
-                    rel="noopener noreferrer">Twitter</a>
-                <a href="https://github.com/leafspark" class="social-link" target="_blank"
-                    rel="noopener noreferrer">GitHub</a>
+        <section data-section="interests.txt">
+            <h2>> cat interests</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Aviation</h3>
+                    <p>Aircraft tracking && aviation systems</p>
+                </div>
+                <div class="card">
+                    <h3>Cellmapping</h3>
+                    <p>Network exploration && coverage analysis</p>
+                </div>
+                <div class="card">
+                    <h3>iOS && Tech</h3>
+                    <p>Mobile development && system modifications</p>
+                </div>
+                <div class="card">
+                    <h3>Minecraft</h3>
+                    <p>Digital architecture && mod development</p>
+                </div>
             </div>
         </section>
-    </main>
-</body>
 
+        <section data-section="projects.txt">
+            <h2>> ls projects/</h2>
+            <p>iOS tweaks, custom IPAs, and experimental builds available in my repositories.</p>
+        </section>
+
+        <section data-section="connect.txt">
+            <h2>> social --list</h2>
+            <div class="links">
+                <a href="https://reddit.com/user/leafspark" class="link" target="_blank" rel="noopener noreferrer">/u/leafspark</a>
+                <a href="https://github.com/leafspark" class="link" target="_blank" rel="noopener noreferrer">github/leafspark</a>
+            </div>
+        </section>
+    </div>
+</body>
 </html>
